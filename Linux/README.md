@@ -5,7 +5,7 @@ Unlike other updaters, this compares the Oxide version against the local copy be
 That way the server plugin support won't brake because the server won't be updated until a new Oxide update is out.
 The script comes in 3 variants:
 
-##LGSM version (Strongly Recommended)
+## LGSM version (Strongly Recommended)
 
 This requires LGSM to be used for the server management. It requires no configuration for the script and it's the most 
 hassle-free option. Just put the script in the LGSM root directory, where the rustserver startup file is located. You can schedule this in a crontab.
