@@ -20,7 +20,7 @@ serverPath="/home/rustserver/serverfiles"
 steamcmdPath="/usr/games"
 ```
 
-The paths above need to be configured accordingly the script can then be ran from any location.
+The paths above need to be configured accordingly. The script can then be ran from any location.
 In order to put the script in a crontab, you also need to preceed it with a server stop script and then succeed it with a server start script.
 
 ## Linux Native Manual
@@ -32,6 +32,6 @@ serverPath="/home/rustserver/serverfiles"
 steamcmdPath="/usr/games"
 ```
 
-The paths above need to be configured accordingly the script can then be ran from any location.
+The paths above need to be configured accordingly. The script can then be ran from any location.
 This is a manual version to be run from the command line and it requires user input.
 For an automated crontab task, use one of the other 2 options.
