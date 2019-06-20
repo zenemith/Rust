@@ -11,7 +11,7 @@ This requires LGSM to be used for the server management. It requires no configur
 hassle-free option. Just put the script in the LGSM root directory, where the rustserver startup file is located. You can schedule this in a crontab.
 It will take care of everything.
 
-## Linux Native
+## Linux Native version
 
 This requires some configuration. 
 
@@ -23,7 +23,7 @@ steamcmdPath="/usr/games"
 The paths above need to be configured accordingly. The script can then be ran from any location.
 In order to put the script in a crontab, you also need to preceed it with a server stop script and then succeed it with a server start script.
 
-## Linux Native Manual
+## Linux Native Manual version
 
 Just like the other native option, this requires some configuration. 
 
