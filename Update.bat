@@ -44,7 +44,7 @@ REM Run shell as admin (example) - put here code as you like
 ECHO %batchName% Arguments: %1 %2 %3 %4 %5 %6 %7 %8 %9
 echo "Downloading Latest version info"
 cd "C:\Program Files (x86)\GnuWin32\bin"
-wget --no-check-certificate https://umod.org/games/rust/latest.json -O " C:\rustcity\rust\latest.json"  
+wget --no-check-certificate https://umod.org/games/rust/latest.json -O "C:\rustcity\rust\latest.json"  
 echo "Validating if an update is required"
 cd "C:\rustcity\rust\"
 < installed.json (
