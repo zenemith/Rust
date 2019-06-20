@@ -48,3 +48,6 @@ sudo chmod +x scriptName
 ```
 
 Replace rustserveruser and scriptName with the user that runs the server as well as the name of the script you downloaded.
+
+#### Author:
+m33ts4k0z, Discord: m33ts4k0z#9595
