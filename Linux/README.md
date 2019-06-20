@@ -35,3 +35,15 @@ steamcmdPath="/usr/games"
 The paths above need to be configured accordingly. The script can then be ran from any location.
 This is a manual version to be run from the command line and it requires user input.
 For an automated crontab task, use one of the other 2 options.
+
+# Additional information
+
+You will need to run these commands once:
+
+```
+sudo apt -y install curl python3 unzip
+sudo chown <rustserveruser> <scriptName>
+sudo chmod +x <scriptName>
+```
+
+Replace <rustserveruser> and <scriptName> with the user that runs the server as well as the name of the script you downloaded.
