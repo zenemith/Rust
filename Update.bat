@@ -42,13 +42,20 @@ if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 ::::::::::::::::::::::::::::
 REM Run shell as admin (example) - put here code as you like
 ECHO %batchName% Arguments: %1 %2 %3 %4 %5 %6 %7 %8 %9
+echo "Starting . . ."
+set ServerDirectory=C:\rustcity\rust\
+set SteamCMD=C:\rustcity\steamcmd\
 echo "Downloading Latest version info"
 cd "C:\Program Files (x86)\GnuWin32\bin"
 wget --no-check-certificate https://umod.org/games/rust/latest.json -O "%ServerDirectory%latest.json"
-pause
-echo "Setting Variables"
-set ServerDirectory=C:\rustcity\rust\
-set SteamCMD=C:\rustcity\steamcmd\
+cd "%ServerDirectory%"
+if exist %ServerDirectory%installed.json (
+echo "installed.json already exists, checking for update"
+) else (
+cd "%ServerDirectory%"
+cmd /c > installed.json
+echo "installed.json does not exist, created empty installed.json"
+)
 cd "%ServerDirectory%"
 < installed.json (
   set /p InstalledOxideVersion=
@@ -56,20 +63,8 @@ cd "%ServerDirectory%"
 < latest.json (
   set /p LatestOxideVersion=
 )
-echo "Checking if installed.json exists, if not an empty file will be created"
-pause
-if exist %ServerDirectory%installed.json (
-echo "installed.json already exists, checking for update"
-pause
-) else (
-cd "%ServerDirectory%"
-cmd /c > installed.json
-echo "installed.json does not exist, created empty installed.json"
-)
-pause
 if /i "!InstalledOxideVersion!" == "!LatestOxideVersion!" (
 echo "No update required"
-pause
 ) else (
 echo "Starting Update, make sure your server is turned off before continuing!"
 pause
@@ -81,7 +76,7 @@ wget --no-check-certificate https://umod.org/games/rust/latest.json -O "%ServerD
 cd "C:\Program Files\7-Zip\" 
 7z x -spe "%ServerDirectory%Oxide.Rust.zip" -o"%ServerDirectory%" -aoa
 del "%ServerDirectory%Oxide.Rust.zip"  
-echo "Oxide and installed.json has been updated"
+echo "Rust, Oxide and installed.json has been updated"
 pause
 )
 exit  
