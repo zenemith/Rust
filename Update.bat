@@ -63,7 +63,7 @@ pause
 "C:\rustcity\steamcmd\steamcmd.exe" +login anonymous +force_install_dir C:\rustcity\rustx +app_update 258550 +validate +quit
 cd "C:\Program Files (x86)\GnuWin32\bin"
 wget --no-check-certificate https://umod.org/games/rust/download -O "C:\rustcity\OxideTempZip\Oxide.Rust.zip"
-wget --no-check-certificate https://umod.org/games/rust/latest.json -O "C:\rustcity\installed.json"
+wget --no-check-certificate https://umod.org/games/rust/latest.json -O "C:\rustcity\rust\installed.json"
 cd "C:\Program Files\7-Zip\" 
 7z x -spe "C:\rustcity\OxideTempZip\Oxide.Rust.zip" -o"C:\rustcity\rust\" -aoa
 del "C:\rustcity\OxideTempZip\Oxide.Rust.zip"  
