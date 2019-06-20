@@ -47,7 +47,9 @@ sudo chown rustserveruser scriptName
 sudo chmod +x scriptName
 ```
 
-Replace rustserveruser and scriptName with the user that runs the server as well as the name of the script you downloaded.
+Replace rustserveruser and scriptName with the user that runs the server as well as the name of the script you downloaded.<br />
+When you first download and run the script for the first time, it is recommended to restart your server once.
+
 
 #### Author:
 m33ts4k0z, Discord: m33ts4k0z#9595
