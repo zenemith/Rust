@@ -44,7 +44,8 @@ REM Run shell as admin (example) - put here code as you like
 ECHO %batchName% Arguments: %1 %2 %3 %4 %5 %6 %7 %8 %9
 echo "Downloading Latest version info"
 cd "C:\Program Files (x86)\GnuWin32\bin"
-wget --no-check-certificate https://umod.org/games/rust/latest.json -O "C:\rustcity\rust\latest.json"  
+wget --no-check-certificate https://umod.org/games/rust/latest.json -O "C:\rustcity\rust\latest.json"
+pause
 echo "Validating if an update is required"
 cd "C:\rustcity\rust\"
 < installed.json (
@@ -52,16 +53,19 @@ cd "C:\rustcity\rust\"
 )
 < latest.json (
   set /p LatestOxideVersion=
-)  
-if !InstalledOxideVersion! == !LatestOxideVersion!
+)
+pause
+if /i "!InstalledOxideVersion!" == "!LatestOxideVersion!" (
 echo "No update required"
-else
+) else (
 echo "Starting Update, make sure your server is turned off before continuing!"
 pause
+"C:\rustcity\steamcmd\steamcmd.exe" +login anonymous +force_install_dir C:\rustcity\rustx +app_update 258550 +validate +quit
 cd "C:\Program Files (x86)\GnuWin32\bin"
 wget --no-check-certificate https://umod.org/games/rust/download -O "C:\rustcity\OxideTempZip\Oxide.Rust.zip"
 wget --no-check-certificate https://umod.org/games/rust/latest.json -O "C:\rustcity\installed.json"
 cd "C:\Program Files\7-Zip\" 
 7z x -spe "C:\rustcity\OxideTempZip\Oxide.Rust.zip" -o"C:\rustcity\rust\" -aoa
 del "C:\rustcity\OxideTempZip\Oxide.Rust.zip"  
+)
 exit  
