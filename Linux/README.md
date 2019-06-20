@@ -3,6 +3,7 @@
 This is a linux shell script for updating Oxide and the Rust server itself.
 Unlike other updaters, this compares the Oxide version against the local copy before performing the update.
 That way the server plugin support won't brake because the server won't be updated until a new Oxide update is out.
+The instructions below apply to Ubuntu/Debian but are very similar to any linux distribution.
 The script comes in 3 variants:
 
 ## LGSM version (Strongly Recommended)
