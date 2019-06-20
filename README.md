@@ -24,7 +24,7 @@ After you installed wget, verify the directory of wget. If it is not at **"C:\Pr
 ### 7zip
 After you install 7zip, verify the directly of 7zip. If it is not at **"C:\Program Files\7-Zip\"** please edit all lines that show **cd "C:\Program Files\7-Zip\"** to show the correct directly of 7zip.
 
-### Rust directory
+### Rust and SteamCMD Directory
 You will see 2 Variables called ServerDirectory and SteamCMD. Please update these to your Server Directory and SteamCMD directory!
 
 ## Other info
