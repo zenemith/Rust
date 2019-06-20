@@ -11,7 +11,7 @@ This requires LGSM to be used for the server management. It requires no configur
 hassle-free option. Just put the script in the LGSM root directory, where the rustserver startup file is located. You can schedule this in a crontab.
 It will take care of everything.
 
-## Linux Native version
+## Linux Native Auto version
 
 This requires some configuration. 
 
