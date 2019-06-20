@@ -1,9 +1,9 @@
 # Rust Oxide Updater for Linux
 
-This is a linux shell script for updating Oxide and the Rust server itself.
-Unlike other updaters, this compares the Oxide version against the local copy before performing the update.
-That way the server plugin support won't brake because the server won't be updated until a new Oxide update is out.
-The instructions below apply to Ubuntu/Debian but are very similar to any linux distribution.
+This is a linux shell script for updating Oxide and the Rust server itself.<br />
+Unlike other updaters, this compares the Oxide version against the local copy before performing the update.<br />
+That way the server plugin support won't brake because the server won't be updated until a new Oxide update is out.<br />
+The instructions below apply to Ubuntu/Debian but are very similar to any linux distribution.<br />
 The script comes in 3 variants:
 
 ## LGSM version (Strongly Recommended)
@@ -21,7 +21,7 @@ serverPath="/home/rustserver/serverfiles"
 steamcmdPath="/usr/games"
 ```
 
-The paths above need to be configured accordingly. The script can then be ran from any location.
+The paths above need to be configured accordingly. The script can then be ran from any location.<br />
 In order to put the script in a crontab, you also need to preceed it with a server stop script and then succeed it with a server start script.
 
 ## Linux Native Manual version
@@ -33,8 +33,8 @@ serverPath="/home/rustserver/serverfiles"
 steamcmdPath="/usr/games"
 ```
 
-The paths above need to be configured accordingly. The script can then be ran from any location.
-This is a manual version to be run from the command line and it requires user input.
+The paths above need to be configured accordingly. The script can then be ran from any location.<br />
+This is a manual version to be run from the command line and it requires user input.<br />
 For an automated crontab task, use one of the other 2 options.
 
 # Additional information
