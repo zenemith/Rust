@@ -9,11 +9,11 @@ then
     echo "Writing new version ["$oxideVersionLatest"] to file..."
     echo "$oxideVersionLatest" > oxide.version
     echo "New version written successfully. Updating server..."
-    ./rustserver update
+    ./rustserver update >/dev/null 2>&1
     echo "Updating Oxide..."
-    ./rustserver mods-update
+    ./rustserver mods-update >/dev/null 2>&1
     echo "Restarting the server..."
-    ./rustserver restart 
+    ./rustserver restart >/dev/null 2>&1
     echo "All operations completed successfully!"   
 else
     echo "No update is available"
