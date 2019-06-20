@@ -8,7 +8,9 @@ You will notice there is a lot of code in here, most of it is to elevate the bat
 
 ## Pre-installation
 Download and install 7zip: https://www.7-zip.org/download.html
-Download and install wget: (Will update this later)
+Download and install wget: https://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download?use_mirror=svwh
+
+After you downloaded wget you will need to update it. Download wget.exe (Version 1.19) from https://drive.google.com/file/d/1LETKrfV90cTPU6tJve8S9SgbUWHZt7sM/view and replace wget in "C:\Program Files (x86)\GnuWin32\bin"
 
 ## Step 1 - Saving
 Save the file at any directory with any name that is convenient for you but make sure you save it as a .bat file as this is for batch on Windows OS.
