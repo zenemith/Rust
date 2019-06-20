@@ -2,7 +2,7 @@
 
 This is a linux shell script for updating Oxide and the Rust server itself.<br />
 Unlike other updaters, this compares the Oxide version against the local copy before performing the update.<br />
-That way the server plugin support won't brake because the server won't be updated until a new Oxide update is out.<br />
+That way the server plugin support won't break because the server won't be updated until a new Oxide update is out.<br />
 The instructions below apply to Ubuntu/Debian but are very similar to any linux distribution.<br />
 The script comes in 3 variants:
 
