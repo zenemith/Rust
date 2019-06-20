@@ -42,8 +42,8 @@ You will need to run these commands once:
 
 ```
 sudo apt -y install curl python3 unzip
-sudo chown <rustserveruser> <scriptName>
-sudo chmod +x <scriptName>
+sudo chown rustserveruser scriptName
+sudo chmod +x scriptName
 ```
 
-Replace <rustserveruser> and <scriptName> with the user that runs the server as well as the name of the script you downloaded.
+Replace rustserveruser and scriptName with the user that runs the server as well as the name of the script you downloaded.
