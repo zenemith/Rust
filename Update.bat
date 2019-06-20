@@ -44,28 +44,44 @@ REM Run shell as admin (example) - put here code as you like
 ECHO %batchName% Arguments: %1 %2 %3 %4 %5 %6 %7 %8 %9
 echo "Downloading Latest version info"
 cd "C:\Program Files (x86)\GnuWin32\bin"
-wget --no-check-certificate https://umod.org/games/rust/latest.json -O "C:\rustcity\rust\latest.json"
+wget --no-check-certificate https://umod.org/games/rust/latest.json -O "%ServerDirectory%latest.json"
 pause
-echo "Validating if an update is required"
-cd "C:\rustcity\rust\"
+echo "Setting Variables"
+set ServerDirectory=C:\rustcity\rust\
+set SteamCMD=C:\rustcity\steamcmd\
+cd "%ServerDirectory%"
 < installed.json (
   set /p InstalledOxideVersion=
 )
 < latest.json (
   set /p LatestOxideVersion=
 )
+echo "Checking if installed.json exists, if not an empty file will be created"
+pause
+if exist %ServerDirectory%installed.json (
+echo "installed.json already exists, checking for update"
+pause
+) else (
+cd "%ServerDirectory%"
+cmd /c > installed.json
+echo "installed.json does not exist, created empty installed.json"
+)
 pause
 if /i "!InstalledOxideVersion!" == "!LatestOxideVersion!" (
 echo "No update required"
+pause
 ) else (
 echo "Starting Update, make sure your server is turned off before continuing!"
 pause
-"C:\rustcity\steamcmd\steamcmd.exe" +login anonymous +force_install_dir C:\rustcity\rustx +app_update 258550 +validate +quit
+"%SteamCMD%steamcmd.exe" +login anonymous +force_install_dir %ServerDirectory% +app_update 258550 validate +quit
+pause
 cd "C:\Program Files (x86)\GnuWin32\bin"
-wget --no-check-certificate https://umod.org/games/rust/download -O "C:\rustcity\OxideTempZip\Oxide.Rust.zip"
-wget --no-check-certificate https://umod.org/games/rust/latest.json -O "C:\rustcity\rust\installed.json"
+wget --no-check-certificate https://umod.org/games/rust/download -O "%ServerDirectory%Oxide.Rust.zip"
+wget --no-check-certificate https://umod.org/games/rust/latest.json -O "%ServerDirectory%installed.json"
 cd "C:\Program Files\7-Zip\" 
-7z x -spe "C:\rustcity\OxideTempZip\Oxide.Rust.zip" -o"C:\rustcity\rust\" -aoa
-del "C:\rustcity\OxideTempZip\Oxide.Rust.zip"  
+7z x -spe "%ServerDirectory%Oxide.Rust.zip" -o"%ServerDirectory%" -aoa
+del "%ServerDirectory%Oxide.Rust.zip"  
+echo "Oxide and installed.json has been updated"
+pause
 )
 exit  
