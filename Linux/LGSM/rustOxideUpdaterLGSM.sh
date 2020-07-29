@@ -14,7 +14,7 @@ then
     ./rustserver mods-update >/dev/null 2>&1
     echo "Restarting the server..."
     ./rustserver restart >/dev/null 2>&1
-    echo "All operations completed successfully!"   
+    echo "All operations completed successfully!"
 else
     echo "No update is available"
 fi

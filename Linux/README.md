@@ -8,13 +8,13 @@ The script comes in 3 variants:
 
 ## LGSM version (Strongly Recommended)
 
-This requires LGSM to be used for the server management. It requires no configuration for the script and it's the most 
+This requires LGSM to be used for the server management. It requires no configuration for the script and it's the most
 hassle-free option. Just put the script in the LGSM root directory, where the rustserver startup file is located. You can schedule this in a crontab.
 It will take care of everything.
 
 ## Linux Native Auto version
 
-This requires some configuration. 
+This requires some configuration.
 
 ```
 serverPath="/home/rustserver/serverfiles"
@@ -26,7 +26,7 @@ In order to put the script in a crontab, you also need to preceed it with a serv
 
 ## Linux Native Manual version
 
-Just like the other native option, this requires some configuration. 
+Just like the other native option, this requires some configuration.
 
 ```
 serverPath="/home/rustserver/serverfiles"

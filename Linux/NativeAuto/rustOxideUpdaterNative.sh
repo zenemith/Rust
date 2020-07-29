@@ -20,7 +20,7 @@ then
     echo "Updating Oxide..."
     curl -L "$oxideLatestURL" --output oxide.zip >/dev/null 2>&1
     unzip -o oxide.zip -d "$serverPath"/ >/dev/null 2>&1
-    rm oxide.zip >/dev/null 2>&1        
+    rm oxide.zip >/dev/null 2>&1
     echo "All operations completed successfully!"
 else
     echo "No update is available"

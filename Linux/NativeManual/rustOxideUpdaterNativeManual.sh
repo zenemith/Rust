@@ -32,18 +32,18 @@ then
             while : ; do
             read -n 2 k <&1
             echo
-            if [[ $k = "ok" ]] ; then   
+            if [[ $k = "ok" ]] ; then
             echo "All operations completed successfully!"
             break
-            else    
+            else
                 echo "Please restart the server and type 'ok' to continue"
-            fi 
+            fi
             done
         break
-    else    
+    else
         echo "Please stop the server and type 'done' to continue"
     fi
-    done  
+    done
 else
     echo "No update is available"
 fi
