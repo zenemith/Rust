@@ -40,7 +40,7 @@ if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 ::::::::::::::::::::::::::::
 ::START
 ::::::::::::::::::::::::::::
-REM Run shell as admin (example) - put here code as you like
+REM Run shell as admin [example] - put here code as you like
 ECHO %batchName% Arguments: %1 %2 %3 %4 %5 %6 %7 %8 %9
 echo "Starting . . ."
 set ServerDirectory=C:\rustcity\rust\
