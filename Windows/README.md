@@ -16,7 +16,7 @@ After you downloaded wget you will need to update it. Download wget.exe (Version
 Save the file at any directory with any name that is convenient for you but make sure you save it as a .bat file as this is for batch on Windows OS.
 
 ## Step 2 - Editing
-Right click and edit the file. 
+Right click and edit the file.
 
 ### wget
 After you installed wget, verify the directory of wget. If it is not at **"C:\Program Files (x86)\GnuWin32\bin"** please edit all lines that show **cd "C:\Program Files (x86)\GnuWin32\bin"** to show the correct directory of wget.

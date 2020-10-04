@@ -8,7 +8,7 @@ steamcmdPath="/usr/games"
 # Edit above this line
 
 oxideVersionLatest=$(curl -s 'https://umod.org/games/rust/latest.json' | python3 -c "import sys, json; print(json.load(sys.stdin)['version'])")
-oxideLatestURL=$(curl -s 'https://umod.org/games/rust/latest.json' | python3 -c "import sys, json; print(json.load(sys.stdin)['download_url'])")
+oxideLatestURL=$(curl -s 'https://umod.org/games/rust/latest.json' | python3 -c "import sys, json; print(json.load(sys.stdin)['snapshot_url'])")
 oxideVersionInstalled=$(cat oxide.version)
 echo "Checking for a new oxide version..."
 if [ "$oxideVersionLatest" != "$oxideVersionInstalled" ] || [ -z "$oxideVersionInstalled" ]
@@ -32,18 +32,18 @@ then
             while : ; do
             read -n 2 k <&1
             echo
-            if [[ $k = "ok" ]] ; then   
+            if [[ $k = "ok" ]] ; then
             echo "All operations completed successfully!"
             break
-            else    
+            else
                 echo "Please restart the server and type 'ok' to continue"
-            fi 
+            fi
             done
         break
-    else    
+    else
         echo "Please stop the server and type 'done' to continue"
     fi
-    done  
+    done
 else
     echo "No update is available"
 fi

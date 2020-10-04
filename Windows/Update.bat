@@ -40,7 +40,7 @@ if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 ::::::::::::::::::::::::::::
 ::START
 ::::::::::::::::::::::::::::
-REM Run shell as admin (example) - put here code as you like
+REM Run shell as admin [example] - put here code as you like
 ECHO %batchName% Arguments: %1 %2 %3 %4 %5 %6 %7 %8 %9
 echo "Starting . . ."
 set ServerDirectory=C:\rustcity\rust\
@@ -73,10 +73,10 @@ pause
 cd "C:\Program Files (x86)\GnuWin32\bin"
 wget --no-check-certificate https://umod.org/games/rust/download -O "%ServerDirectory%Oxide.Rust.zip"
 wget --no-check-certificate https://umod.org/games/rust/latest.json -O "%ServerDirectory%installed.json"
-cd "C:\Program Files\7-Zip\" 
+cd "C:\Program Files\7-Zip\"
 7z x -spe "%ServerDirectory%Oxide.Rust.zip" -o"%ServerDirectory%" -aoa
-del "%ServerDirectory%Oxide.Rust.zip"  
+del "%ServerDirectory%Oxide.Rust.zip"
 echo "Rust, Oxide and installed.json has been updated"
 pause
 )
-exit  
+exit
