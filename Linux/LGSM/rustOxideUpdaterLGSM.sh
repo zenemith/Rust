@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# First time, run: sudo apt install curl python3
+# First time, run: sudo apt -y install curl python3 unzip
 oxideVersionLatest=$(curl -s 'https://umod.org/games/rust/latest.json' | python3 -c "import sys, json; print(json.load(sys.stdin)['version'])")
 oxideVersionInstalled=$(cat oxide.version)
 echo "Checking for a new oxide version..."
